@@ -9,6 +9,19 @@
     "ts-node": "^10.7.0",
     "typescript": "^4.6.4"
   },
+  "mocha": {
+    "require": "ts-node/register",
+    "extensions": [
+      "ts"
+    ],
+    "spec": [
+      "index.test.ts"
+    ],
+    "watch-files": [
+      "index.ts",
+      "index.test.ts"
+    ]
+  },
   "prettier": {
     "singleQuote": true,
     "trailingComma": "none"
