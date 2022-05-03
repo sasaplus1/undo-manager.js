@@ -20,6 +20,7 @@
     "lint": "run-s lint:*",
     "lint:prettier": "prettier --check index.ts",
     "lint:tsc": "tsc --noEmit",
+    "test": "mocha",
     "watch": "tsc --watch"
   }
 }
