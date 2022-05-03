@@ -30,9 +30,10 @@
   "scripts": {
     "build": "tsc",
     "fix": "run-s fix:*",
+    "fix:fixpack": "npx fixpack",
     "fix:prettier": "prettier --write index.ts index.test.ts",
-    "fixpack": "npx fixpack",
     "lint": "run-s lint:*",
+    "lint:fixpack": "npx fixpack --dryRun",
     "lint:prettier": "prettier --check index.ts index.test.ts",
     "lint:tsc": "tsc --noEmit",
     "test": "mocha",
