@@ -17,10 +17,10 @@
   "scripts": {
     "build": "tsc",
     "fix": "run-s fix:*",
-    "fix:prettier": "prettier --write index.ts",
+    "fix:prettier": "prettier --write index.ts index.test.ts",
     "fixpack": "npx fixpack",
     "lint": "run-s lint:*",
-    "lint:prettier": "prettier --check index.ts",
+    "lint:prettier": "prettier --check index.ts index.test.ts",
     "lint:tsc": "tsc --noEmit",
     "test": "mocha",
     "watch": "tsc --watch"
