@@ -25,17 +25,18 @@ class UndoManager {
     }
     redo() {
         if (!this.canRedo()) {
-            throw new Error("Cannot redo");
+            throw new Error('Cannot redo');
         }
         this._index += 1;
         return this._stack[this._index];
     }
     undo() {
         if (!this.canUndo()) {
-            throw new Error("Cannot undo");
+            throw new Error('Cannot undo');
         }
         this._index -= 1;
         return this._stack[this._index];
     }
 }
 exports.UndoManager = UndoManager;
+//# sourceMappingURL=index.js.map
