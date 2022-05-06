@@ -1,4 +1,8 @@
 {
+  "name": "undo-manager",
+  "description": "Undo manager for editor implementation",
+  "version": "1.0.0",
+  "author": "sasa+1 <sasaplus1@gmail.com>",
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.1",
     "@types/mocha": "^9.1.1",
@@ -9,6 +13,12 @@
     "ts-node": "^10.7.0",
     "typescript": "^4.6.4"
   },
+  "files": [
+    "index.d.ts",
+    "index.js",
+    "index.js.map"
+  ],
+  "main": "./index.js",
   "mocha": {
     "require": "ts-node/register",
     "extensions": [
@@ -27,8 +37,13 @@
     "trailingComma": "none"
   },
   "private": true,
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sasaplus1/undo-manager.js.git"
+  },
   "scripts": {
-    "build": "tsc",
+    "build": "tsc -p tsconfig.main.json",
     "fix": "run-s fix:*",
     "fix:fixpack": "npx fixpack",
     "fix:prettier": "prettier --write index.ts index.test.ts",
@@ -37,6 +52,7 @@
     "lint:prettier": "prettier --check index.ts index.test.ts",
     "lint:tsc": "tsc --noEmit",
     "test": "mocha",
-    "watch": "tsc --watch"
-  }
+    "watch": "tsc -p tsconfig.main.json --watch"
+  },
+  "sideEffects": false
 }
